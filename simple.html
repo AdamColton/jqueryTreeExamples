@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Example</title>
+    <style>
+      .treeChildren {
+        display:none;
+        list-style-type: none;
+        padding-left: 15px;
+        margin-top: 0;
+      }
+      .treeIcon {
+        padding-right:5px;
+        font-style: normal;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="tree"></div>
+    <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://raw.githubusercontent.com/AdamColton/jqueryTree/master/tree.js"></script>
+    <script>
+      var t = $("#tree").tree({
+        title: "Food"
+      }).treeLoad([
+          {
+            title: "Fruit",
+            id: "f",
+            children: [
+              {
+                title: "Apple",
+                id: "f-a"
+              }, {
+                title: "Bannana",
+                id: "f-b"
+              }, {
+                title: "Cantaloupe",
+                id: "f-c"
+              }
+            ]
+          }, {
+            title: "Vegetable",
+            id: "v",
+            children: [
+              {
+                title: "Carrot",
+                id: "v-ca"
+              }, {
+                title: "Celery",
+                id: "v-ce"
+              }, {
+                title: "Parsnip",
+                id: "v-p"
+              }
+            ]
+          }, {
+            title: "Grain",
+            id: "g",
+            children: [
+              {
+                title: "Wheat",
+                id: "g-w"
+              },{
+                title: "Barley",
+                id: "g-b"
+              },{
+                title: "Quinoa",
+                id: "g-q"
+              }
+            ]
+          }
+        ]);
+    </script>
+  </body>
+</html>
